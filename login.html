@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>COZY CUP - Login</title>
+
+    <link rel="stylesheet" href="login.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body class="login-page">
+
+    <div class="login-container">
+
+        <!-- LOGO -->
+        <div class="login-logo">
+            <div class="coffee-icon">☕</div>
+            <h1>COZY CUP</h1>
+            <p>Fresh coffee. Fresh moments.</p>
+        </div>
+
+
+        <!-- LOGIN BOX -->
+        <div class="login-box">
+
+            <h2>Welcome Back</h2>
+
+            <p class="login-subtitle">
+                Login to continue to your COZY CUP account.
+            </p>
+
+
+            <form id="loginForm">
+
+                <!-- EMAIL -->
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- PASSWORD -->
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <div class="password-wrapper">
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Enter your password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            id="togglePassword"
+                            class="toggle-password"
+                        >
+                            👁
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- REMEMBER / FORGOT -->
+                <div class="login-options">
+
+                    <label class="remember">
+
+                        <input
+                            type="checkbox"
+                            id="rememberMe"
+                        >
+
+                        Remember me
+
+                    </label>
+
+                    <a href="#" id="forgotPassword">
+                        Forgot Password?
+                    </a>
+
+                </div>
+
+
+                <!-- LOGIN BUTTON -->
+                <button
+                    type="submit"
+                    class="login-button"
+                >
+                    Login
+                </button>
+
+            </form>
+
+
+            <!-- REGISTER -->
+            <div class="register-link">
+
+                <p>
+                    Don't have an account?
+                    <a href="register.html">
+                        Create Account
+                    </a>
+                </p>
+
+            </div>
+
+
+            <!-- CONTINUE AS GUEST -->
+            <div class="guest-login">
+
+                <span>or</span>
+
+                <a href="index.html">
+                    Continue as Guest
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- BACK TO WEBSITE -->
+        <a
+            href="index.html"
+            class="back-home"
+        >
+            ← Back to COZY CUP
+        </a>
+
+    </div>
+
+
+    <div
+        id="loginMessage"
+        class="login-message"
+    ></div>
+
+
+    <script src="login.js"></script>
+
+</body>
+</html>
+```

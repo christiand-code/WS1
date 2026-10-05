@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>COZY CUP</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- LOGIN PROTECTION -->
+<script>
+    const isLoggedIn = localStorage.getItem("cozyCupLoggedIn");
+
+    if (isLoggedIn !== "true") {
+        window.location.replace("login.html");
+    }
+</script>
+
+
+<!-- =========================
+     NAVIGATION
+========================== -->
+
+<header class="navbar">
+
+    <div class="logo">
+        ☕ COZY CUP
+    </div>
+
+    <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+
+        <button
+            id="darkModeToggle"
+            class="icon-button"
+            type="button"
+            title="Toggle Dark Mode">
+            🌙
+        </button>
+
+        <button
+            id="cartButton"
+            class="cart-button"
+            type="button">
+
+            🛒 Cart
+
+            <span id="cartCount">0</span>
+
+        </button>
+
+        <button
+            id="logoutButton"
+            class="logout-button"
+            type="button">
+
+            Logout
+
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     HOME / HERO
+========================== -->
+
+<section id="home" class="hero-section">
+
+    <div class="hero-content">
+
+        <span class="hero-label">
+            WELCOME TO COZY CUP
+        </span>
+
+        <h1>
+            Your Daily Cup of
+            <span>Happiness</span>
+        </h1>
+
+        <p>
+            Freshly brewed coffee, delicious treats,
+            and a cozy place to relax.
+        </p>
+
+        <a href="#menu" class="hero-button">
+            Explore Our Menu
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FEATURES
+========================== -->
+
+<section class="features-section">
+
+    <div class="feature-card">
+
+        <div class="feature-icon">
+            ☕
+        </div>
+
+        <h3>Fresh Coffee</h3>
+
+        <p>
+            Freshly brewed coffee made with quality beans.
+        </p>
+
+    </div>
+
+
+    <div class="feature-card">
+
+        <div class="feature-icon">
+            🍰
+        </div>
+
+        <h3>Delicious Treats</h3>
+
+        <p>
+            Enjoy pastries and desserts with your coffee.
+        </p>
+
+    </div>
+
+
+    <div class="feature-card">
+
+        <div class="feature-icon">
+            ❤️
+        </div>
+
+        <h3>Made With Love</h3>
+
+        <p>
+            Every cup is prepared with care.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MENU
+========================== -->
+
+<section id="menu" class="menu-section">
+
+    <div class="section-heading">
+
+        <span class="section-label">
+            OUR MENU
+        </span>
+
+        <h2>
+            Our <span>Menu</span>
+        </h2>
+
+        <p>
+            Enjoy our freshly prepared coffee
+            and delicious treats.
+        </p>
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="menu-search-container">
+
+        <input
+            type="text"
+            id="menuSearch"
+            placeholder="Search coffee or food..."
+            autocomplete="off">
+
+    </div>
+
+
+    <!-- CATEGORY FILTER -->
+
+    <div class="category-buttons">
+
+        <button
+            class="category-button active"
+            data-category="all"
+            type="button">
+            All
+        </button>
+
+        <button
+            class="category-button"
+            data-category="coffee"
+            type="button">
+            Coffee
+        </button>
+
+        <button
+            class="category-button"
+            data-category="drink"
+            type="button">
+            Drinks
+        </button>
+
+        <button
+            class="category-button"
+            data-category="food"
+            type="button">
+            Food
+        </button>
+
+    </div>
+
+
+    <!-- =========================
+         MENU GRID
+    ========================== -->
+
+    <div class="menu-grid">
+
+
+        <!-- CLASSIC KOPI -->
+
+        <div
+            class="coffee-card menu-item"
+            data-category="coffee"
+            data-name="Classic Kopi">
+
+            <div class="coffee-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=800&q=85"
+                    alt="Classic Kopi">
+
+            </div>
+
+            <div class="coffee-content">
+
+                <span class="menu-category">
+                    COFFEE
+                </span>
+
+                <h3>Classic Kopi</h3>
+
+                <p>
+                    Traditional rich and aromatic coffee
+                    perfect for starting your day.
+                </p>
+
+                <div class="coffee-bottom">
+
+                    <span class="price">
+                        ₱95
+                    </span>
+
+                    <button
+                        class="coffee-order"
+                        type="button"
+                        data-name="Classic Kopi"
+                        data-price="95"
+                        data-image="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=800&q=85"
+                        data-description="Traditional rich and aromatic coffee perfect for starting your day.">
+
+                        Order
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ICED KOPI -->
+
+        <div
+            class="coffee-card menu-item"
+            data-category="coffee"
+            data-name="Iced Kopi">
+
+            <div class="coffee-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=800&q=85"
+                    alt="Iced Kopi">
+
+            </div>
+
+            <div class="coffee-content">
+
+                <span class="menu-category">
+                    COFFEE
+                </span>
+
+                <h3>Iced Kopi</h3>
+
+                <p>
+                    Smooth coffee served cold with ice
+                    for a refreshing taste.
+                </p>
+
+                <div class="coffee-bottom">
+
+                    <span class="price">
+                        ₱110
+                    </span>
+
+                    <button
+                        class="coffee-order"
+                        type="button"
+                        data-name="Iced Kopi"
+                        data-price="110"
+                        data-image="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=800&q=85"
+                        data-description="Smooth coffee served cold with ice for a refreshing taste.">
+
+                        Order
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CARAMEL LATTE -->
+
+        <div
+            class="coffee-card menu-item"
+            data-category="coffee"
+            data-name="Caramel Latte">
+
+            <div class="coffee-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=800&q=85"
+                    alt="Caramel Latte">
+
+            </div>
+
+            <div class="coffee-content">
+
+                <span class="menu-category">
+                    COFFEE
+                </span>
+
+                <h3>Caramel Latte</h3>
+
+                <p>
+                    Creamy espresso blended with
+                    smooth caramel and milk.
+                </p>
+
+                <div class="coffee-bottom">
+
+                    <span class="price">
+                        ₱130
+                    </span>
+
+                    <button
+                        class="coffee-order"
+                        type="button"
+                        data-name="Caramel Latte"
+                        data-price="130"
+                        data-image="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=800&q=85"
+                        data-description="Creamy espresso blended with smooth caramel and milk.">
+
+                        Order
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CHOCOLATE MOCHA -->
+
+        <div
+            class="coffee-card menu-item"
+            data-category="coffee"
+            data-name="Chocolate Mocha">
+
+            <div class="coffee-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?auto=format&fit=crop&w=800&q=85"
+                    alt="Chocolate Mocha">
+
+            </div>
+
+            <div class="coffee-content">
+
+                <span class="menu-category">
+                    COFFEE
+                </span>
+
+                <h3>Chocolate Mocha</h3>
+
+                <p>
+                    A delicious combination of coffee,
+                    chocolate, and creamy milk.
+                </p>
+
+                <div class="coffee-bottom">
+
+                    <span class="price">
+                        ₱135
+                    </span>
+
+                    <button
+                        class="coffee-order"
+                        type="button"
+                        data-name="Chocolate Mocha"
+                        data-price="135"
+                        data-image="https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?auto=format&fit=crop&w=800&q=85"
+                        data-description="A delicious combination of coffee, chocolate, and creamy milk.">
+
+                        Order
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- BUTTER CROISSANT -->
+
+        <div
+            class="coffee-card menu-item"
+            data-category="food"
+            data-name="Butter Croissant">
+
+            <div class="coffee-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=85"
+                    alt="Butter Croissant">
+
+            </div>
+
+            <div class="coffee-content">
+
+                <span class="menu-category">
+                    FOOD
+                </span>
+
+                <h3>Butter Croissant</h3>
+
+                <p>
+                    Flaky and buttery pastry
+                    freshly prepared for you.
+                </p>
+
+                <div class="coffee-bottom">
+
+                    <span class="price">
+                        ₱85
+                    </span>
+
+                    <button
+                        class="normal-order"
+                        type="button"
+                        data-name="Butter Croissant"
+                        data-price="85"
+                        data-image="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=85">
+
+                        Add to Cart
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CHOCOLATE CAKE -->
+
+        <div
+            class="coffee-card menu-item"
+            data-category="food"
+            data-name="Chocolate Cake">
+
+            <div class="coffee-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=85"
+                    alt="Chocolate Cake">
+
+            </div>
+
+            <div class="coffee-content">
+
+                <span class="menu-category">
+                    FOOD
+                </span>
+
+                <h3>Chocolate Cake</h3>
+
+                <p>
+                    Soft chocolate cake with
+                    a rich chocolate flavor.
+                </p>
+
+                <div class="coffee-bottom">
+
+                    <span class="price">
+                        ₱120
+                    </span>
+
+                    <button
+                        class="normal-order"
+                        type="button"
+                        data-name="Chocolate Cake"
+                        data-price="120"
+                        data-image="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=85">
+
+                        Add to Cart
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CHEESECAKE -->
+
+        <div
+            class="coffee-card menu-item"
+            data-category="food"
+            data-name="Cheesecake">
+
+            <div class="coffee-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&q=85"
+                    alt="Cheesecake">
+
+            </div>
+
+            <div class="coffee-content">
+
+                <span class="menu-category">
+                    FOOD
+                </span>
+
+                <h3>Cheesecake</h3>
+
+                <p>
+                    Smooth and creamy cheesecake
+                    with a delicious finish.
+                </p>
+
+                <div class="coffee-bottom">
+
+                    <span class="price">
+                        ₱125
+                    </span>
+
+                    <button
+                        class="normal-order"
+                        type="button"
+                        data-name="Cheesecake"
+                        data-price="125"
+                        data-image="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&q=85">
+
+                        Add to Cart
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CINNAMON ROLL -->
+
+        <div
+            class="coffee-card menu-item"
+            data-category="food"
+            data-name="Cinnamon Roll">
+
+            <div class="coffee-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1509365465985-25d11c17e812?auto=format&fit=crop&w=800&q=85"
+                    alt="Cinnamon Roll">
+
+            </div>
+
+            <div class="coffee-content">
+
+                <span class="menu-category">
+                    FOOD
+                </span>
+
+                <h3>Cinnamon Roll</h3>
+
+                <p>
+                    Soft cinnamon pastry with
+                    a sweet and warm flavor.
+                </p>
+
+                <div class="coffee-bottom">
+
+                    <span class="price">
+                        ₱90
+                    </span>
+
+                    <button
+                        class="normal-order"
+                        type="button"
+                        data-name="Cinnamon Roll"
+                        data-price="90"
+                        data-image="https://images.unsplash.com/photo-1509365465985-25d11c17e812?auto=format&fit=crop&w=800&q=85">
+
+                        Add to Cart
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================== -->
+
+<section id="about" class="about-section">
+
+    <div class="section-heading">
+
+        <span class="section-label">
+            ABOUT US
+        </span>
+
+        <h2>
+            Welcome to <span>Cozy Cup</span>
+        </h2>
+
+    </div>
+
+    <div class="about-content">
+
+        <p>
+            Cozy Cup is a coffee shop created for coffee
+            lovers who want great drinks, delicious food,
+            and a relaxing atmosphere.
+        </p>
+
+        <p>
+            From classic coffee to sweet treats,
+            every order is prepared with care.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================== -->
+
+<section id="contact" class="contact-section">
+
+    <div class="section-heading">
+
+        <span class="section-label">
+            CONTACT
+        </span>
+
+        <h2>
+            Get in <span>Touch</span>
+        </h2>
+
+    </div>
+
+    <div class="contact-info">
+
+        <p>
+            📍 Antipolo, Rizal
+        </p>
+
+        <p>
+            📞 0912 345 6789
+        </p>
+
+        <p>
+            ✉️ cozycup@email.com
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     COFFEE CUSTOMIZATION MODAL
+========================== -->
+
+<div
+    id="coffeeModal"
+    class="modal">
+
+    <div class="modal-content coffee-customization">
+
+        <button
+            id="closeCoffeeModal"
+            class="close-modal"
+            type="button">
+            ×
+        </button>
+
+
+        <div class="custom-coffee-image">
+
+            <img
+                id="customCoffeeImage"
+                src=""
+                alt="Selected coffee">
+
+        </div>
+
+
+        <h2 id="customCoffeeName">
+            Coffee
+        </h2>
+
+        <p id="customCoffeeDescription">
+            Customize your coffee.
+        </p>
+
+
+        <!-- SIZE -->
+
+        <div class="custom-option">
+
+            <h3>
+                Size
+            </h3>
+
+            <label>
+                <input
+                    type="radio"
+                    name="coffeeSize"
+                    value="Small"
+                    data-price="0"
+                    checked>
+
+                Small
+            </label>
+
+            <label>
+                <input
+                    type="radio"
+                    name="coffeeSize"
+                    value="Medium"
+                    data-price="20">
+
+                Medium +₱20
+            </label>
+
+            <label>
+                <input
+                    type="radio"
+                    name="coffeeSize"
+                    value="Large"
+                    data-price="35">
+
+                Large +₱35
+            </label>
+
+        </div>
+
+
+        <!-- MILK -->
+
+        <div class="custom-option">
+
+            <h3>
+                Milk
+            </h3>
+
+            <select id="coffeeMilk">
+
+                <option value="Regular" data-price="0">
+                    Regular
+                </option>
+
+                <option value="Oat Milk" data-price="20">
+                    Oat Milk +₱20
+                </option>
+
+                <option value="Soy Milk" data-price="15">
+                    Soy Milk +₱15
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- SUGAR -->
+
+        <div class="custom-option">
+
+            <h3>
+                Sugar Level
+            </h3>
+
+            <select id="coffeeSugar">
+
+                <option value="0%">
+                    0%
+                </option>
+
+                <option value="25%">
+                    25%
+                </option>
+
+                <option value="50%" selected>
+                    50%
+                </option>
+
+                <option value="75%">
+                    75%
+                </option>
+
+                <option value="100%">
+                    100%
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- ADD-ONS -->
+
+        <div class="custom-option">
+
+            <h3>
+                Add-ons
+            </h3>
+
+            <label>
+                <input
+                    type="checkbox"
+                    name="coffeeAddon"
+                    value="Extra Shot"
+                    data-price="30">
+
+                Extra Shot +₱30
+            </label>
+
+            <label>
+                <input
+                    type="checkbox"
+                    name="coffeeAddon"
+                    value="Caramel"
+                    data-price="15">
+
+                Caramel +₱15
+            </label>
+
+            <label>
+                <input
+                    type="checkbox"
+                    name="coffeeAddon"
+                    value="Vanilla"
+                    data-price="15">
+
+                Vanilla +₱15
+            </label>
+
+            <label>
+                <input
+                    type="checkbox"
+                    name="coffeeAddon"
+                    value="Whipped Cream"
+                    data-price="20">
+
+                Whipped Cream +₱20
+            </label>
+
+        </div>
+
+
+        <!-- QUANTITY -->
+
+        <div class="quantity-section">
+
+            <h3>
+                Quantity
+            </h3>
+
+            <div class="quantity-controls">
+
+                <button
+                    id="decreaseCoffeeQty"
+                    type="button">
+                    −
+                </button>
+
+                <span id="coffeeQuantity">
+                    1
+                </span>
+
+                <button
+                    id="increaseCoffeeQty"
+                    type="button">
+                    +
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- TOTAL -->
+
+        <div class="custom-total">
+
+            Total:
+            <strong id="customCoffeeTotal">
+                ₱0
+            </strong>
+
+        </div>
+
+
+        <!-- BUTTONS -->
+
+        <div class="customization-buttons">
+
+            <button
+                id="saveCustomization"
+                class="save-customization"
+                type="button">
+
+                Save Customization
+
+            </button>
+
+            <button
+                id="addCustomCoffee"
+                class="add-cart-button"
+                type="button">
+
+                Add to Cart
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     CART MODAL
+========================== -->
+
+<div
+    id="cartModal"
+    class="modal">
+
+    <div class="modal-content cart-content">
+
+        <button
+            id="closeCart"
+            class="close-modal"
+            type="button">
+
+            ×
+
+        </button>
+
+        <h2>
+            Your Cart
+        </h2>
+
+
+        <div id="cartItems">
+
+            <p class="empty-cart">
+                Your cart is empty.
+            </p>
+
+        </div>
+
+
+        <div class="cart-footer">
+
+            <h3>
+                Total:
+                <span id="cartTotal">
+                    ₱0
+                </span>
+            </h3>
+
+            <button
+                id="checkoutButton"
+                class="checkout-button"
+                type="button">
+
+                Proceed to Checkout
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     CHECKOUT MODAL
+========================== -->
+
+<div
+    id="checkoutModal"
+    class="modal">
+
+    <div class="modal-content checkout-content">
+
+        <button
+            id="closeCheckout"
+            class="close-modal"
+            type="button">
+
+            ×
+
+        </button>
+
+        <h2>
+            Checkout
+        </h2>
+
+        <form id="checkoutForm">
+
+            <label for="customerName">
+                Full Name
+            </label>
+
+            <input
+                type="text"
+                id="customerName"
+                required>
+
+
+            <label for="customerPhone">
+                Phone Number
+            </label>
+
+            <input
+                type="tel"
+                id="customerPhone"
+                required>
+
+
+            <label for="orderType">
+                Order Type
+            </label>
+
+            <select
+                id="orderType"
+                required>
+
+                <option value="">
+                    Select Order Type
+                </option>
+
+                <option value="Dine In">
+                    Dine In
+                </option>
+
+                <option value="Take Out">
+                    Take Out
+                </option>
+
+            </select>
+
+
+            <label for="paymentMethod">
+                Payment Method
+            </label>
+
+            <select
+                id="paymentMethod"
+                required>
+
+                <option value="">
+                    Select Payment Method
+                </option>
+
+                <option value="Cash">
+                    Cash
+                </option>
+
+                <option value="GCash">
+                    GCash
+                </option>
+
+            </select>
+
+
+            <label for="orderNotes">
+                Order Notes
+            </label>
+
+            <textarea
+                id="orderNotes"
+                rows="4"
+                placeholder="Additional notes..."></textarea>
+
+
+            <button
+                type="submit"
+                class="place-order-button">
+
+                Place Order
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     TOAST
+========================== -->
+
+<div
+    id="toast"
+    class="toast">
+
+    Item added to cart!
+
+</div>
+
+
+<!-- JAVASCRIPT -->
+
+<script src="script.js?v=4"></script>
+
+</body>
+
+</html>

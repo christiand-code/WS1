@@ -1,0 +1,429 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    font-family: "DM Sans", sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            rgba(59, 36, 24, 0.72),
+            rgba(59, 36, 24, 0.72)
+        ),
+        url("https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+    background-position: center;
+
+    color: #3b2418;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px 15px;
+}
+
+
+/* =========================
+   REGISTER CONTAINER
+========================= */
+
+.register-container {
+    width: 100%;
+    max-width: 470px;
+
+    text-align: center;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.register-logo {
+    color: white;
+
+    margin-bottom: 25px;
+}
+
+.coffee-icon {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 12px;
+
+    display: grid;
+    place-items: center;
+
+    background: #f4c27a;
+
+    color: #3b2418;
+
+    border-radius: 50%;
+
+    font-size: 32px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.register-logo h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 2.3rem;
+
+    letter-spacing: 1px;
+}
+
+.register-logo p {
+    margin-top: 5px;
+
+    color: #f3e9e0;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   REGISTER BOX
+========================= */
+
+.register-box {
+    background: rgba(255, 255, 255, 0.97);
+
+    border-radius: 24px;
+
+    padding: 35px;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.30);
+
+    text-align: left;
+}
+
+.register-box h2 {
+    font-family: "Playfair Display", serif;
+
+    color: #3b2418;
+
+    text-align: center;
+
+    font-size: 2rem;
+
+    margin-bottom: 8px;
+}
+
+.register-subtitle {
+    color: #7c6d64;
+
+    text-align: center;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+
+    color: #3b2418;
+
+    font-weight: 700;
+
+    font-size: 14px;
+
+    margin-bottom: 7px;
+}
+
+.form-group input {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid #e5d8cd;
+
+    border-radius: 11px;
+
+    background: #fff;
+
+    color: #3b2418;
+
+    outline: none;
+
+    font-size: 14px;
+
+    transition: 0.25s ease;
+}
+
+.form-group input:focus {
+    border-color: #c47a44;
+
+    box-shadow:
+        0 0 0 3px rgba(196, 122, 68, 0.12);
+}
+
+.form-group input::placeholder {
+    color: #aaa;
+}
+
+
+/* =========================
+   PASSWORD
+========================= */
+
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    padding-right: 50px;
+}
+
+.toggle-password {
+    position: absolute;
+
+    right: 8px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 38px;
+    height: 38px;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   TERMS
+========================= */
+
+.terms {
+    margin: 5px 0 20px;
+
+    font-size: 13px;
+
+    color: #7c6d64;
+
+    line-height: 1.5;
+}
+
+.terms label {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 8px;
+
+    cursor: pointer;
+}
+
+.terms input {
+    margin-top: 3px;
+
+    accent-color: #c47a44;
+}
+
+.terms a {
+    color: #c47a44;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   REGISTER BUTTON
+========================= */
+
+.register-button {
+    width: 100%;
+
+    border: none;
+
+    padding: 14px;
+
+    border-radius: 12px;
+
+    background: #3b2418;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.register-button:hover {
+    background: #c47a44;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(59, 36, 24, 0.20);
+}
+
+.register-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================
+   LOGIN LINK
+========================= */
+
+.login-link {
+    text-align: center;
+
+    margin-top: 22px;
+}
+
+.login-link p {
+    color: #7c6d64;
+
+    font-size: 14px;
+}
+
+.login-link a {
+    color: #c47a44;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: 0.25s ease;
+}
+
+.login-link a:hover {
+    color: #8b5e3c;
+
+    text-decoration: underline;
+}
+
+
+/* =========================
+   BACK TO LOGIN
+========================= */
+
+.back-login {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    color: white;
+
+    font-size: 14px;
+
+    text-decoration: none;
+
+    transition: 0.25s ease;
+}
+
+.back-login:hover {
+    color: #f4c27a;
+
+    transform: translateX(-3px);
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.register-message {
+    position: fixed;
+
+    left: 50%;
+    bottom: 25px;
+
+    transform: translate(-50%, 20px);
+
+    background: #3b2418;
+
+    color: white;
+
+    padding: 14px 22px;
+
+    border-radius: 12px;
+
+    font-size: 14px;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition: 0.3s ease;
+
+    z-index: 9999;
+}
+
+.register-message.show {
+    opacity: 1;
+
+    transform: translate(-50%, 0);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 20px 12px;
+    }
+
+    .register-box {
+        padding: 28px 20px;
+    }
+
+    .register-logo h1 {
+        font-size: 2rem;
+    }
+
+    .register-box h2 {
+        font-size: 1.7rem;
+    }
+
+}

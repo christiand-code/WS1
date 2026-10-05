@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>COZY CUP - Register</title>
+
+    <link rel="stylesheet" href="register.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body class="register-page">
+
+    <div class="register-container">
+
+        <!-- LOGO -->
+        <div class="register-logo">
+
+            <div class="coffee-icon">
+                ☕
+            </div>
+
+            <h1>COZY CUP</h1>
+
+            <p>
+                Fresh coffee. Fresh moments.
+            </p>
+
+        </div>
+
+
+        <!-- REGISTER BOX -->
+        <div class="register-box">
+
+            <h2>Create Account</h2>
+
+            <p class="register-subtitle">
+                Create your COZY CUP account to get started.
+            </p>
+
+
+            <form id="registerForm">
+
+                <!-- FULL NAME -->
+                <div class="form-group">
+
+                    <label for="fullname">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="fullname"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- EMAIL -->
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- PASSWORD -->
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <div class="password-wrapper">
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Create a password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            id="togglePassword"
+                            class="toggle-password"
+                        >
+                            👁
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CONFIRM PASSWORD -->
+                <div class="form-group">
+
+                    <label for="confirmPassword">
+                        Confirm Password
+                    </label>
+
+                    <div class="password-wrapper">
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            placeholder="Confirm your password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            id="toggleConfirmPassword"
+                            class="toggle-password"
+                        >
+                            👁
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TERMS -->
+                <div class="terms">
+
+                    <label>
+
+                        <input
+                            type="checkbox"
+                            id="terms"
+                            required
+                        >
+
+                        I agree to the
+                        <a href="#">
+                            Terms & Conditions
+                        </a>
+
+                    </label>
+
+                </div>
+
+
+                <!-- REGISTER BUTTON -->
+                <button
+                    type="submit"
+                    class="register-button"
+                >
+                    Create Account
+                </button>
+
+            </form>
+
+
+            <!-- LOGIN LINK -->
+            <div class="login-link">
+
+                <p>
+
+                    Already have an account?
+
+                    <a href="login.html">
+                        Login
+                    </a>
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- BACK TO WEBSITE -->
+        <a
+            href="login.html"
+            class="back-login"
+        >
+            ← Back to Login
+        </a>
+
+    </div>
+
+
+    <!-- MESSAGE -->
+    <div
+        id="registerMessage"
+        class="register-message"
+    ></div>
+
+
+    <script src="register.js"></script>
+
+</body>
+</html>
